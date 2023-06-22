@@ -1,0 +1,18 @@
+<personas>
+  <persona>
+
+    <Nombres>Francisco Matias</nombres>
+    <Apellido>Fernandez</Apellido>
+    <Telefono>3573438197</Telefono>
+    <Email>franfer6@hotmail.com</Email>
+
+   </persona>
+   <persona>
+
+    <Nombres>Matias Saul</nombres>
+    <Apellido>Arguello</Apellido>
+    <Telefono>3573457934</Telefono>
+    <Email>matix@hotmail.com</Email>
+
+   </persona>
+</personas>

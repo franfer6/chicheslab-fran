@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "nombres": "Francisco Matias",
+        "apellido": "Fernandez",
+        "telefono": [
+            {
+                "tipo": "personal",
+                "numero": "3573438197"
+            }
+        ],
+        "email": "franfer6@hotmail.com",
+        "edad": 35,
+        "donante": true,
+        "coord": {
+            "lat": -23.633446,
+            "long": 12.325674
+        }
+    },
+    {
+        "id":2,
+        "nombres": "Matias Saul",
+        "apellido": "Arguello",
+        "telefono": [
+            {
+                "tipo": "personal",
+                "numero": "3573438197"
+            }
+        ],
+        "email": "matix@hotmail.com",
+        "edad": 34,
+        "donante": false,
+        "coord": {
+            "lat": -23.623446,
+            "long": 12.328674
+        }
+    }
+]
