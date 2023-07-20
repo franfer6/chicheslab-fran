@@ -1,0 +1,37 @@
+.lista-contactos{
+display: flex;
+width: 360px;
+flex-direction: column;
+align-items: center;
+gap: 8px;
+}
+
+.btn{
+flex-shrink: 0;
+border-radius: 8px;
+background: #D9D9D9;
+padding-top: 10px;
+padding-bottom: 9px;
+padding-left: 38px;
+padding-right: 38px;
+
+}
+
+.lista{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+}
+
+.tarjeta-contacto{
+    display: flex;
+    width: 360px;
+    height: 72px;
+    padding: 16px 15px 16px 12px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 15px;
+    background: #EB1212;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
