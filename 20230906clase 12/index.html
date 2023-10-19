@@ -11,34 +11,60 @@
     <script>
 
         const alicIva = 0.105;
+        const factorcorIIBB = 0.8;
+        const sellado = 70;
         var totalFactura;
         var precioGrano;
         var cantidadGrano;
 
-        totalFactura = 100000;
+        var totalFact1 = 100000;
+        var difCambioFact1 = 0;
+        var percIVAFact1 = 0;
+
+        totalFactura = totalFact1 + difCambioFact1 + percIVAFact1 + sellado;
         precioGrano = 65000;
       
 
         var comision = 0.015;
         var flete = 5500;
-        var grado = 2;
+        var grado = 3;
         var valorGrado;
+        var alicIIBB = 0.008;
+        var tipoGrano = "Trigo";
 
-        if (grado == 1) {
+
+
+        if (grado == 1) 
+        {
+            if (tipoGrano == "Trigo") 
+            {
+                valorGrado = 0.015;
+            }
+            else {
                 valorGrado = 0.01;
             }
+        }
+
         if (grado == 2) {
                 valorGrado = 0;
             }
         if (grado == 3) {
+            if (tipoGrano == "Trigo") 
+            {
+                valorGrado = -0.01;
+            }
+            else {
                 valorGrado = -0.015;
+            }
             }
         
         var factor = 100;
         var valorFactor = factor/100;
         var precioCalidad = precioGrano * (1 + valorGrado) * valorFactor;
         var precioOperacion = precioCalidad - precioGrano * comision - flete;
-        var precioFinal = precioOperacion * (1 + alicIva);
+        var precioIIBB = precioGrano * valorFactor + precioGrano * (valorGrado)
+        var precioFinal = precioOperacion * (1 + alicIva) - precioIIBB * (1 + alicIva) * factorcorIIBB * alicIIBB;
+        
 
         cantidadGrano = totalFactura / precioFinal;
 
