@@ -13,15 +13,34 @@
         const alicIva = 0.105;
         const factorcorIIBB = 0.8;
         const sellado = 70;
-        var totalFactura;
+        var totalPEE;
         var precioGrano;
         var cantidadGrano;
 
-        var totalFact1 = 100000;
-        var difCambioFact1 = 0;
-        var percIVAFact1 = 0;
+        var TotalesFacturas = []
 
-        totalFactura = totalFact1 + difCambioFact1 + percIVAFact1 + sellado;
+        var factura = { fechaVto: "30-11-2023", numeroFactura: "1234A00001234", importe: 50000, difCambio: 90, percIva: 500}
+        var factura1 = { fechaVto: "30-11-2023", numeroFactura: "1234A00001235", importe: 25000, difCambio: 10, percIva: 250}
+        var factura2 = { fechaVto: "30-11-2023", numeroFactura: "1234A00001236", importe: 25000, difCambio: 10, percIva: 250}
+
+
+        TotalesFacturas.push(factura)
+        TotalesFacturas.push(factura1)
+        TotalesFacturas.push(factura2)
+
+        var sumaDifCambio = 0;
+        var sumapercIva = 0;
+        var sumaFacturas = 0;
+
+        for (let i = 0; i < TotalesFacturas.length; i++) {
+            sumaFacturas = sumaFacturas + TotalesFacturas[i].importe;
+            sumaDifCambio = sumaDifCambio + TotalesFacturas[i].difCambio;
+            sumapercIva = sumaFacturas + TotalesFacturas[i].percIva;
+        }
+
+
+        totalPEE = sumaFacturas + sumaDifCambio + sumapercIva + sellado;
+        
         precioGrano = 65000;
       
 
@@ -66,7 +85,7 @@
         var precioFinal = precioOperacion * (1 + alicIva) - precioIIBB * (1 + alicIva) * factorcorIIBB * alicIIBB;
         
 
-        cantidadGrano = totalFactura / precioFinal;
+        cantidadGrano = totalPEE / precioFinal;
 
         console.log("Total a liquidar:"+cantidadGrano.toFixed(3)+"tn")
 
