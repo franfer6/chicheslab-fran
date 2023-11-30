@@ -1,237 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculo PEE</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
-<body>
-    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-   
-   
+<body>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
     <div class="container">
 
 
-    <h1 
-        style="text-align: center; color: blue;"
-    >
-        Planilla Cálculo PEE
-    </h1>
+        <h1 style="text-align: center; color: blue;">
+            Planilla Cálculo PEE
+        </h1>
         <br>
         <br>
-        <h4>Seleccione grano:</h4>
-        <select id="txtGrano" onchange="ObtenerTipoGrano()" class="form-select" aria-label="Default select example">
-            <option selected>Seleccione Grano</option>
-            <option value="Trigo">Trigo</option>
-            <option value="Soja">Soja</option>
-            <option value="Maiz">Maiz</option>
-            <option value="Maiz Colorado">Maiz Colorado</option>
-            <option value="Sorgo">Sorgo</option>
-          </select>
 
-        <h4>Precio:</h4>
-        <div class="input-group mb-3">
-            
-           
-            <span class="input-group-text" id="basic-addon1">$</span>
-            <input id="txtPrecioGrano" type="number" class="form-control" placeholder="0.00" aria-label="PrecioGrano" aria-describedby="basic-addon1">
-            
-          </div>
-          <h4>Comisión:</h4>
-          <div class="input-group mb-3">
-            
-            <input id="txtComision" type="number" class="form-control" placeholder="0.0" aria-label="PrecioGrano" aria-describedby="basic-addon1">
-            <span class="input-group-text" id="basic-addon1">%</span>
-            
-          </div>
 
-          <h4>Flete:</h4>
-          <div class="input-group mb-3">
-            
-            <span class="input-group-text" id="basic-addon1">$</span>
-            <input id="txtFlete" type="number" class="form-control" placeholder="0.00" aria-label="PrecioGrano" aria-describedby="basic-addon1">
-            
-        
-          </div>
+      
 
-          <h4>Grado:</h4>
-          <div class="input-group mb-3">
-            
-            <span class="input-group-text" id="basic-addon1">G</span>
-            <input id="txtGrado" type="number" class="form-control" placeholder="0" aria-label="PrecioGrano" aria-describedby="basic-addon1">
-            
-        
-          </div>
-          <h4>Factor:</h4>
-          <div class="input-group mb-3">
-            
-            <span class="input-group-text" id="basic-addon1">F</span>
-            <input id="txtFactor" type="number" class="form-control" placeholder="00.00" aria-label="PrecioGrano" aria-describedby="basic-addon1">
-            
-        
-          </div>
 
-          <h4>Alicuota IIBB (LUA):</h4>
-          <div class="input-group mb-3">
-            
-            
-            <input id="txtAlicIIBB" type="number" class="form-control" placeholder="0.00" aria-label="PrecioGrano" aria-describedby="basic-addon1">
-            <span class="input-group-text" id="basic-addon1">%</span>
-        
-          </div>
+
+
+
+
+
+        <div class="accordion mb-3" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        <strong>Condiciones comerciales</strong>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+
+
+
+                        <h4>Seleccione grano:</h4>
+                        <select id="txtGrano" class="form-select" aria-label="Default select example">
+                            <option selected>Seleccione Grano</option>
+                            <option value="Trigo">Trigo</option>
+                            <option value="Soja">Soja</option>
+                            <option value="Maiz">Maiz</option>
+                            <option value="Maiz Colorado">Maiz Colorado</option>
+                            <option value="Sorgo">Sorgo</option>
+                        </select>
+
+                        <h4>Precio:</h4>
+                        <div class="input-group mb-3">
+
+
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input id="txtPrecioGrano" type="number" class="form-control" placeholder="0.00"
+                                aria-label="PrecioGrano" aria-describedby="basic-addon1">
+
+                        </div>
+                        <h4>Comisión:</h4>
+                        <div class="input-group mb-3">
+
+                            <input id="txtComision" type="number" class="form-control" placeholder="0.0"
+                                aria-label="PrecioGrano" aria-describedby="basic-addon1">
+                            <span class="input-group-text" id="basic-addon1">%</span>
+
+                        </div>
+
+                        <h4>Flete:</h4>
+                        <div class="input-group mb-3">
+
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input id="txtFlete" type="number" class="form-control" placeholder="0.00"
+                                aria-label="PrecioGrano" aria-describedby="basic-addon1">
+
+
+                        </div>
+
+                        <h4>Grado:</h4>
+                        <div class="input-group mb-3">
+
+                            <span class="input-group-text" id="basic-addon1">G</span>
+                            <input id="txtGrado" type="number" class="form-control" placeholder="0"
+                                aria-label="PrecioGrano" aria-describedby="basic-addon1">
+
+
+                        </div>
+                        <h4>Factor:</h4>
+                        <div class="input-group mb-3">
+
+                            <span class="input-group-text" id="basic-addon1">F</span>
+                            <input id="txtFactor" type="number" class="form-control" placeholder="00.00"
+                                aria-label="PrecioGrano" aria-describedby="basic-addon1">
+
+
+                        </div>
+
+                        <h4>Alicuota IIBB (LUA):</h4>
+                        <div class="input-group mb-3">
+
+
+                            <input id="txtAlicIIBB" type="number" class="form-control" placeholder="0.00"
+                                aria-label="PrecioGrano" aria-describedby="basic-addon1">
+                            <span class="input-group-text" id="basic-addon1">%</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        <strong>Facturas</strong>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                  
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="row row-cols-1 row-cols-lg-5 g-2">
+                                            <div class="form-floating">
+                                                <input type="date" disabled class="form-control" id="txtFechaVto">
+                                                <label for="txtFechaVto">Fecha vencimiento</label>
+                                            </div>
+                                            <div class="form-floating">
+                                                <input type="text" disabled class="form-control" id="txtNumFact">
+                                                <label for="txtNumFact">Número de Factura</label>
+                                            </div>
+                                            <div class="form-floating">
+                                                <input type="number" disabled class="form-control" id="txtImporte">
+                                                <label for="txtImporte">Importe</label>
+                                            </div>
+                                            <div class="form-floating">
+                                                <input type="number" disabled class="form-control" id="txtDifCambio">
+                                                <label for="txtDifCambio">Diferencia de cambio</label>
+                                            </div>
+                                            <div class="form-floating">
+                                                <input type="number" disabled class="form-control" id="txtPercIva">
+                                                <label for="txtPercIva">Percepcion IVA</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" disabled class="form-control" id="txtObs">
+                                                <label for="txtObs">Observaciones</label>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">Editar
+                                        </button>
+                
+                
+                                    </div>
+                
+                
+                                </div>
+                
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    Agregar Factura
+                                </button>
+                
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Factura</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row row-cols-1 g-2">
+                                                    <div class="form-floating">
+                                                        <input type="date" class="form-control" id="txtFechaVto">
+                                                        <label for="txtFechaVto">Fecha vencimiento</label>
+                                                    </div>
+                                                    <div class="form-floating">
+                                                        <input type="text" class="form-control" id="txtNumFact">
+                                                        <label for="txtNumFact">Número de Factura</label>
+                                                    </div>
+                                                    <div class="form-floating">
+                                                        <input type="number" class="form-control" id="txtImporte">
+                                                        <label for="txtImporte">Importe</label>
+                                                    </div>
+                                                    <div class="form-floating">
+                                                        <input type="number" class="form-control" id="txtDifCambio">
+                                                        <label for="txtDifCambio">Diferencia de cambio</label>
+                                                    </div>
+                                                    <div class="form-floating">
+                                                        <input type="number" class="form-control" id="txtPercIva">
+                                                        <label for="txtPercIva">Percepcion IVA</label>
+                                                    </div>
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="txtObs">
+                                                        <label for="txtObs">Observaciones</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                <button type="button" class="btn btn-primary">Guardar cambios</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                
+                            </div>
+                
+                
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <button type="button" class="btn btn-primary" onclick="CalcularKilos()">CALCULAR</button>
         <br>
         <br>
         <div class="input-group mb-3">
-            
-            <input id="txtTotalKgs" type="text" readonly class="form-control" placeholder="0.000" aria-label="Username" aria-describedby="basic-addon1">
+
+            <input id="txtTotalKgs" type="text" readonly class="form-control" placeholder="0.000" aria-label="Username"
+                aria-describedby="basic-addon1">
             <span class="input-group-text" id="basic-addon1">Kgs.</span>
-          </div>
+        </div>
 
     </div>
 
-    
+
 
     <script>
 
         function CalcularKilos() {
-            
-        
-
-        const alicIva = 0.105;
-        const factorcorIIBB = 0.8;
-        const sellado = 70;
-        var totalPEE;
-        var precioGrano;
-        var cantidadGrano;
-
-        var TotalesFacturas = []
-
-        var factura = { fechaVto: "30-11-2023", numeroFactura: "1234A00001234", importe: 50000, difCambio: 1000, percIva: 1500}
-        var factura1 = { fechaVto: "30-11-2023", numeroFactura: "1234A00001235", importe: 25000, difCambio: 500, percIva: 650}
-        var factura2 = { fechaVto: "30-11-2023", numeroFactura: "1234A00001236", importe: 25000, difCambio: 250, percIva: 0}
-
-            
-        TotalesFacturas.push(factura)
-        TotalesFacturas.push(factura1)
-        TotalesFacturas.push(factura2)
-
-        var sumaDifCambio = 0;
-        var sumapercIva = 0;
-        var sumaFacturas = 0;
-
-        for (let i = 0; i < TotalesFacturas.length; i++) {
-            sumaFacturas = sumaFacturas + TotalesFacturas[i].importe;
-            sumaDifCambio = sumaDifCambio + TotalesFacturas[i].difCambio;
-            sumapercIva = sumapercIva + TotalesFacturas[i].percIva;
-        }
-
-
-        totalPEE = sumaFacturas + sumaDifCambio + sumapercIva + sellado;
-        
-        precioGrano = ObtenerPrecioGrano();
-      
-
-         
-        var comision = ObtenerValorComision()
-        var flete = ObtenerValorFlete();
-        var grado = ObtenerValorGrado();
-        var valorGrado;
-        var alicIIBB = ObtenerValorAlicIIBB();
-        var tipoGrano = ObtenerTipoGrano();
 
 
 
-        if (grado == 1) 
-        {
-            if (tipoGrano == "Trigo") 
-            {
-                valorGrado = 0.015;
+            const alicIva = 0.105;
+            const factorcorIIBB = 0.8;
+            const sellado = 70;
+            var totalPEE;
+            var precioGrano;
+            var cantidadGrano;
+
+            var TotalesFacturas = []
+
+            var factura = { fechaVto: "30-11-2023", numeroFactura: "1234A00001234", importe: 50000, difCambio: 1000, percIva: 1500 }
+            var factura1 = { fechaVto: "30-11-2023", numeroFactura: "1234A00001235", importe: 25000, difCambio: 500, percIva: 650 }
+            var factura2 = { fechaVto: "30-11-2023", numeroFactura: "1234A00001236", importe: 25000, difCambio: 250, percIva: 0 }
+
+
+            TotalesFacturas.push(factura)
+            TotalesFacturas.push(factura1)
+            TotalesFacturas.push(factura2)
+
+            var sumaDifCambio = 0;
+            var sumapercIva = 0;
+            var sumaFacturas = 0;
+
+            for (let i = 0; i < TotalesFacturas.length; i++) {
+                sumaFacturas = sumaFacturas + TotalesFacturas[i].importe;
+                sumaDifCambio = sumaDifCambio + TotalesFacturas[i].difCambio;
+                sumapercIva = sumapercIva + TotalesFacturas[i].percIva;
             }
-            else {
-                valorGrado = 0.01;
-            }
-        }
 
-        if (grado == 2) {
+
+            totalPEE = sumaFacturas + sumaDifCambio + sumapercIva + sellado;
+
+            precioGrano = ObtenerPrecioGrano();
+
+
+
+            var comision = ObtenerValorComision()
+            var flete = ObtenerValorFlete();
+            var grado = ObtenerValorGrado();
+            var valorGrado;
+            var alicIIBB = ObtenerValorAlicIIBB();
+            var tipoGrano = ObtenerTipoGrano();
+
+
+
+            if (grado == 1) {
+                if (tipoGrano == "Trigo") {
+                    valorGrado = 0.015;
+                }
+                else {
+                    valorGrado = 0.01;
+                }
+            }
+
+            if (grado == 2) {
                 valorGrado = 0;
             }
-        if (grado == 3) {
-            if (tipoGrano == "Trigo") 
-            {
-                valorGrado = -0.01;
+            if (grado == 3) {
+                if (tipoGrano == "Trigo") {
+                    valorGrado = -0.01;
+                }
+                else {
+                    valorGrado = -0.015;
+                }
             }
-            else {
-                valorGrado = -0.015;
-            }
-            }
-        
-        var factor = ObtenerValorFactor();
-        var valorFactor = factor/100;
-        var precioCalidad = precioGrano * (1 + valorGrado) * valorFactor;
-        var precioOperacion = precioCalidad - precioGrano * (comision/100) - flete;
-        var precioIIBB = precioGrano * valorFactor + precioGrano * (valorGrado)
-        var precioFinal = precioOperacion * (1 + alicIva) - precioIIBB * (1 + alicIva) * factorcorIIBB * (alicIIBB/100);
-        
 
-        cantidadGrano = totalPEE / precioFinal;
-
-        console.log("Total a liquidar:"+cantidadGrano.toFixed(3)+"tn")
-
-        AsignarValor(cantidadGrano.toFixed(3));
-    }
-
-    function AsignarValor(kilos) {
-        var txtKg = document.getElementById("txtTotalKgs")
-        txtKg.value = kilos;
-
-    }
-
-    function ObtenerPrecioGrano() {
-        var txtPG = document.getElementById("txtPrecioGrano")
-        return txtPG.value;
-
-    }
-
-    function ObtenerValorComision() {
-        var txtVC = document.getElementById("txtComision")
-        return txtVC.value;
-
-    }
+            var factor = ObtenerValorFactor();
+            var valorFactor = factor / 100;
+            var precioCalidad = precioGrano * (1 + valorGrado) * valorFactor;
+            var precioOperacion = precioCalidad - precioGrano * (comision / 100) - flete;
+            var precioIIBB = precioGrano * valorFactor + precioGrano * (valorGrado)
+            var precioFinal = precioOperacion * (1 + alicIva) - precioIIBB * (1 + alicIva) * factorcorIIBB * (alicIIBB / 100);
 
 
-function ObtenerValorFlete() {
-    var txtVF = document.getElementById("txtFlete")
-    return txtVF.value;
+            cantidadGrano = totalPEE / precioFinal;
 
-}
+            console.log("Total a liquidar:" + cantidadGrano.toFixed(3) + "tn")
 
-function ObtenerValorGrado() {
-    var txtVGr = document.getElementById("txtGrado")
-    return txtVGr.value;
+            AsignarValor(cantidadGrano.toFixed(3));
+        }
 
-}
+        function AsignarValor(kilos) {
+            var txtKg = document.getElementById("txtTotalKgs")
+            txtKg.value = kilos;
 
-function ObtenerValorFactor() {
-    var txtVFa = document.getElementById("txtFactor")
-    return txtVFa.value;
+        }
 
-}
+        function ObtenerPrecioGrano() {
+            var txtPG = document.getElementById("txtPrecioGrano")
+            return txtPG.value;
 
-function ObtenerValorAlicIIBB() {
-    var txtVAIIBB = document.getElementById("txtAlicIIBB")
-    return txtVAIIBB.value;
+        }
 
-}
+        function ObtenerValorComision() {
+            var txtVC = document.getElementById("txtComision")
+            return txtVC.value;
 
-function ObtenerTipoGrano() {
-    var txtGrano = document.getElementById("txtGrano")
-    return txtGrano.value;
+        }
 
-}
+
+        function ObtenerValorFlete() {
+            var txtVF = document.getElementById("txtFlete")
+            return txtVF.value;
+
+        }
+
+        function ObtenerValorGrado() {
+            var txtVGr = document.getElementById("txtGrado")
+            return txtVGr.value;
+
+        }
+
+        function ObtenerValorFactor() {
+            var txtVFa = document.getElementById("txtFactor")
+            return txtVFa.value;
+
+        }
+
+        function ObtenerValorAlicIIBB() {
+            var txtVAIIBB = document.getElementById("txtAlicIIBB")
+            return txtVAIIBB.value;
+
+        }
+
+        function ObtenerTipoGrano() {
+            var txtGrano = document.getElementById("txtGrano")
+            return txtGrano.value;
+
+        }
     </script>
